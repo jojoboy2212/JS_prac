@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반짝반짝</title>
+</head>
+<body>
+    <h1 id="title" style="font-size: 40px; text-align: center; margin: 20%;">최면거는중</h1>
+
+    <script>
+        function ranNum() {
+            let ranNum = Math.floor(Math.random()*255)
+            return ranNum
+        }
+        let title = document.querySelector("#title")
+        let body = document.querySelector('body')
+        setInterval(function() {
+            title.style.color = 'rgb('+ranNum()+', '+ranNum()+', '+ranNum()+')'
+            body.style.backgroundColor = 'rgb('+ranNum()+', '+ranNum()+', '+ranNum()+')'
+
+        },200)
+    </script>
+</body>
+</html>
